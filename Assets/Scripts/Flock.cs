@@ -32,7 +32,6 @@ public class Flock : MonoBehaviour
 				gameObject.transform.Translate (movement);
 
 				if (birdSelected == (false)) {
-						Debug.Log ("All birds should be selectable");
 						bird1.gameObject.GetComponent<Bird> ().AllowClick ();
 						bird2.gameObject.GetComponent<Bird> ().AllowClick ();
 						bird3.gameObject.GetComponent<Bird> ().AllowClick ();
@@ -90,6 +89,7 @@ public class Flock : MonoBehaviour
 		void OnTriggerExit (Collider otherCollider)
 		{
 				if (otherCollider.gameObject.name.Contains ("ReductionZone")) {
+						Debug.Log ("Left reduction zone");
 						triggered = false;
 
 				}		

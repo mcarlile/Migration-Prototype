@@ -36,7 +36,6 @@ public class Bird : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-				Debug.Log ("allowClick: " + allowClick);
 				if (health < 7) {
 						health7.SetActive (false);
 				} else {

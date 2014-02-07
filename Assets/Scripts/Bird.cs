@@ -36,8 +36,7 @@ public class Bird : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-				Debug.Log ("Name: " + gameObject.transform.name);
-
+				Debug.Log ("allowClick: " + allowClick);
 				if (health < 7) {
 						health7.SetActive (false);
 				} else {
@@ -124,7 +123,11 @@ public class Bird : MonoBehaviour
 						if ((Input.GetMouseButtonDown (0))) {
 								selected = !selected;
 								allowClick = false;
-								flock.GetComponent<Flock> ().ToggleBirdSelected (gameObject.transform.name);
+								if (selected == (true)) {
+										flock.GetComponent<Flock> ().ToggleBirdSelected (gameObject.transform.name);
+								} else {
+										flock.GetComponent<Flock> ().ToggleBirdSelected (null);
+								}
 						}
 				}
 		}
@@ -136,6 +139,11 @@ public class Bird : MonoBehaviour
 				light.SetActive (false);
 				allowClick = true;
 
+		}
+
+		public void AllowClick ()
+		{
+				allowClick = true;
 		}
 	
 

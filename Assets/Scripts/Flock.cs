@@ -27,12 +27,18 @@ public class Flock : MonoBehaviour
 		void Update ()
 		{
 	
-				Debug.Log ("Specific Bird Selected: " + specificBirdSelected);
-
 				//Movement
 				movement = Vector3.up * movementSpeed * Time.deltaTime;
 				gameObject.transform.Translate (movement);
 
+				if (birdSelected == (false)) {
+						Debug.Log ("All birds should be selectable");
+						bird1.gameObject.GetComponent<Bird> ().AllowClick ();
+						bird2.gameObject.GetComponent<Bird> ().AllowClick ();
+						bird3.gameObject.GetComponent<Bird> ().AllowClick ();
+						bird4.gameObject.GetComponent<Bird> ().AllowClick ();
+						bird5.gameObject.GetComponent<Bird> ().AllowClick ();
+				}
 				if (specificBirdSelected == ("Bird1")) {
 						bird2.gameObject.GetComponent<Bird> ().allowClick = false;
 						bird3.gameObject.GetComponent<Bird> ().allowClick = false;
@@ -93,6 +99,11 @@ public class Flock : MonoBehaviour
 		{
 				birdSelected = !birdSelected;
 				specificBirdSelected = birdName;
+		}
+
+		public void UnselectAllBirds ()
+		{
+				birdSelected = false;
 		}
 	
 }

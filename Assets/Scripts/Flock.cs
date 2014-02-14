@@ -15,12 +15,14 @@ public class Flock : MonoBehaviour
 		public bool triggered = false;
 		public bool birdSelected;
 		public string specificBirdSelected;
+		public int specificSpotVacated;
+		public int birdInLeadPosition;
 
 
 		// Use this for initialization
 		void Start ()
 		{
-	
+
 		}
 	
 		// Update is called once per frame
@@ -28,8 +30,8 @@ public class Flock : MonoBehaviour
 		{
 	
 				//Movement
-				movement = Vector3.up * movementSpeed * Time.deltaTime;
-				gameObject.transform.Translate (movement);
+//				movement = Vector3.up * movementSpeed * Time.deltaTime;
+//				gameObject.transform.Translate (movement);
 
 				if (birdSelected == (false)) {
 						bird1.gameObject.GetComponent<Bird> ().AllowClick ();
@@ -105,5 +107,114 @@ public class Flock : MonoBehaviour
 		{
 				birdSelected = false;
 		}
-	
+
+		public void SetVacatedPosition (int spotVacated)
+		{
+				specificSpotVacated = spotVacated;
+		}
+
+		public void SetBirdInLeadPosition (int leadBird)
+		{
+				birdInLeadPosition = leadBird;
+		}
+
+		public void moveLeadBirdToVacatedPosition ()
+		{
+				Debug.Log ("Bird " + birdInLeadPosition + " should be moving to vacated position");
+				if (birdInLeadPosition == 1) {
+						if (specificSpotVacated == 1) {
+								bird1.gameObject.GetComponent<Bird> ().MoveToPosition1 ();
+						}
+
+						if (specificSpotVacated == 2) {
+								bird1.gameObject.GetComponent<Bird> ().MoveToPosition2 ();
+						}
+
+						if (specificSpotVacated == 4) {
+								bird1.gameObject.GetComponent<Bird> ().MoveToPosition4 ();
+						}
+
+						if (specificSpotVacated == 5) {
+								bird1.gameObject.GetComponent<Bird> ().MoveToPosition5 ();
+						}
+				}
+
+				if (birdInLeadPosition == 2) {
+						if (specificSpotVacated == 1) {
+								bird2.gameObject.GetComponent<Bird> ().MoveToPosition1 ();
+						}
+			
+						if (specificSpotVacated == 2) {
+								bird2.gameObject.GetComponent<Bird> ().MoveToPosition2 ();
+						}
+			
+						if (specificSpotVacated == 4) {
+								bird2.gameObject.GetComponent<Bird> ().MoveToPosition4 ();
+						}
+			
+						if (specificSpotVacated == 5) {
+								bird2.gameObject.GetComponent<Bird> ().MoveToPosition5 ();
+						}
+				}
+
+				if (birdInLeadPosition == 3) {
+						Debug.Log ("asdfjlasjdlfjasdlfj");
+
+
+						if (specificSpotVacated == 1) {
+								bird3.gameObject.GetComponent<Bird> ().MoveToPosition1 ();
+						}
+			
+						if (specificSpotVacated == 2) {
+								bird3.gameObject.GetComponent<Bird> ().MoveToPosition2 ();
+						}
+			
+						if (specificSpotVacated == 4) {
+								bird3.gameObject.GetComponent<Bird> ().MoveToPosition4 ();
+						}
+			
+						if (specificSpotVacated == 5) {
+								bird3.gameObject.GetComponent<Bird> ().MoveToPosition5 ();
+						}
+				}
+
+				if (birdInLeadPosition == 4) {
+						if (specificSpotVacated == 1) {
+								bird4.gameObject.GetComponent<Bird> ().MoveToPosition1 ();
+						}
+			
+						if (specificSpotVacated == 2) {
+								bird4.gameObject.GetComponent<Bird> ().MoveToPosition2 ();
+						}
+			
+						if (specificSpotVacated == 4) {
+								bird4.gameObject.GetComponent<Bird> ().MoveToPosition4 ();
+						}
+			
+						if (specificSpotVacated == 5) {
+								bird4.gameObject.GetComponent<Bird> ().MoveToPosition5 ();
+						}
+				}
+
+				if (birdInLeadPosition == 4) {
+						if (specificSpotVacated == 1) {
+								bird5.gameObject.GetComponent<Bird> ().MoveToPosition1 ();
+						}
+			
+						if (specificSpotVacated == 2) {
+								bird5.gameObject.GetComponent<Bird> ().MoveToPosition2 ();
+						}
+			
+						if (specificSpotVacated == 4) {
+								bird5.gameObject.GetComponent<Bird> ().MoveToPosition4 ();
+						}
+			
+						if (specificSpotVacated == 5) {
+								bird5.gameObject.GetComponent<Bird> ().MoveToPosition5 ();
+						}
+				}
+		}
+
 }
+	
+

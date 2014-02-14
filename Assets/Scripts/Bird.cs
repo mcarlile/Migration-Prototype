@@ -4,6 +4,11 @@ using System.Collections;
 public class Bird : MonoBehaviour
 {
 		public GameObject flock;
+		public GameObject position3;
+		public GameObject position1;
+		public GameObject position2;
+		public GameObject position4;
+		public GameObject position5;
 		public GameObject health1;
 		public GameObject health2;
 		public GameObject health3;
@@ -12,8 +17,10 @@ public class Bird : MonoBehaviour
 		public GameObject health6;
 		public GameObject health7;
 		public GameObject light;
+		public Color highlightedColor;
 		public Color selectedColor;
 		public Color deselectedColor;
+		public int birdNumber;
 
 		public float movementSpeed = 1.0f;
 
@@ -31,6 +38,13 @@ public class Bird : MonoBehaviour
 		void Start ()
 		{
 				flock = GameObject.Find ("Flock");
+				position1 = GameObject.Find ("position1");
+				position2 = GameObject.Find ("position2");
+				position3 = GameObject.Find ("position3");
+				position4 = GameObject.Find ("position4");
+				position5 = GameObject.Find ("position5");
+	
+
 		}
 	
 		// Update is called once per frame
@@ -88,16 +102,37 @@ public class Bird : MonoBehaviour
 		public void OnTriggerEnter (Collider  otherCollider)
 		{
 		
-				if (otherCollider.gameObject.name.Contains ("Forward")) {
+//				if (otherCollider.gameObject.name.Contains ("Forward")) {
+//						position = 1;
+//				}
+//		
+//				if (otherCollider.gameObject.name.Contains ("Middle")) {
+//						position = 2;
+//				}
+//		
+//				if (otherCollider.gameObject.name.Contains ("Rear")) {
+//						position = 3;
+//				}
+
+				if (otherCollider.gameObject.name.Contains ("position1")) {
 						position = 1;
 				}
-		
-				if (otherCollider.gameObject.name.Contains ("Middle")) {
+
+				if (otherCollider.gameObject.name.Contains ("position2")) {
 						position = 2;
 				}
-		
-				if (otherCollider.gameObject.name.Contains ("Rear")) {
+
+				if (otherCollider.gameObject.name.Contains ("position3")) {
 						position = 3;
+						flock.GetComponent<Flock> ().SetBirdInLeadPosition (birdNumber);
+				}
+
+				if (otherCollider.gameObject.name.Contains ("position4")) {
+						position = 4;
+				}
+
+				if (otherCollider.gameObject.name.Contains ("position5")) {
+						position = 5;
 				}
 		}
 		public void ChangeHealth ()
@@ -116,7 +151,6 @@ public class Bird : MonoBehaviour
 		void OnMouseOver ()
 		{
 				light.SetActive (true);
-
 				if (allowClick == (true)) {
 						
 						if ((Input.GetMouseButtonDown (0))) {
@@ -124,6 +158,14 @@ public class Bird : MonoBehaviour
 								allowClick = false;
 								if (selected == (true)) {
 										flock.GetComponent<Flock> ().ToggleBirdSelected (gameObject.transform.name);
+										flock.GetComponent<Flock> ().SetVacatedPosition (position);
+										flock.GetComponent<Flock> ().moveLeadBirdToVacatedPosition ();
+										//flock.GetComponent<Flock> ().SetBirdInLeadPosition (birdNumber);
+										MoveToLeadPosition ();
+
+
+
+
 								} else {
 										flock.GetComponent<Flock> ().ToggleBirdSelected (null);
 								}
@@ -131,8 +173,11 @@ public class Bird : MonoBehaviour
 				}
 		}
 
+		void OnMouseEnter ()
+		{
+				gameObject.renderer.material.SetColor ("_Color", highlightedColor);
 
-
+		}
 		void OnMouseExit ()
 		{
 				light.SetActive (false);
@@ -144,7 +189,45 @@ public class Bird : MonoBehaviour
 		{
 				allowClick = true;
 		}
-	
+
+		public void MoveToPosition1 ()
+		{
+				Debug.Log ("move to position1 has been called");
+				iTween.MoveTo (gameObject, iTween.Hash ("position", position1.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+//				transform.position = Vector3.MoveTowards (transform.position, position1.transform.position, Time.deltaTime);
+
+				Debug.Log ("Bird " + birdNumber + "should move to position1 has been called");
+		}
+
+		public void MoveToPosition2 ()
+		{
+				iTween.MoveTo (gameObject, iTween.Hash ("position", position2.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+//				transform.position = Vector3.MoveTowards (transform.position, position2.transform.position, Time.deltaTime);
+
+		}
+
+		public void MoveToLeadPosition ()
+		{
+				Debug.Log ("Bird " + position + "should be moving to lead position");
+
+				iTween.MoveTo (gameObject, iTween.Hash ("position", position3.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+//				transform.position = Vector3.MoveTowards (transform.position, leadPosition.transform.position, Time.deltaTime);
+
+		}
+
+		public void MoveToPosition4 ()
+		{
+				iTween.MoveTo (gameObject, iTween.Hash ("position", position4.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+//				transform.position = Vector3.MoveTowards (transform.position, position4.transform.position, Time.deltaTime);
+
+		}
+
+		public void MoveToPosition5 ()
+		{
+				iTween.MoveTo (gameObject, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+//				transform.position = Vector3.MoveTowards (transform.position, position5.transform.position, Time.deltaTime);
+
+		}
 
 }
 

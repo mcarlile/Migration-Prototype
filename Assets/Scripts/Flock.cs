@@ -91,7 +91,6 @@ public class Flock : MonoBehaviour
 		void OnTriggerExit (Collider otherCollider)
 		{
 				if (otherCollider.gameObject.name.Contains ("ReductionZone")) {
-						Debug.Log ("Left reduction zone");
 						triggered = false;
 
 				}		
@@ -120,7 +119,6 @@ public class Flock : MonoBehaviour
 
 		public void moveLeadBirdToVacatedPosition ()
 		{
-				Debug.Log ("Bird " + birdInLeadPosition + " should be moving to vacated position");
 				if (birdInLeadPosition == 1) {
 						if (specificSpotVacated == 1) {
 								bird1.gameObject.GetComponent<Bird> ().MoveToPosition1 ();
@@ -158,7 +156,6 @@ public class Flock : MonoBehaviour
 				}
 
 				if (birdInLeadPosition == 3) {
-						Debug.Log ("asdfjlasjdlfjasdlfj");
 
 
 						if (specificSpotVacated == 1) {

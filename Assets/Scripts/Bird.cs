@@ -162,6 +162,11 @@ public class Bird : MonoBehaviour
 										flock.GetComponent<Flock> ().moveLeadBirdToVacatedPosition ();
 										//flock.GetComponent<Flock> ().SetBirdInLeadPosition (birdNumber);
 										MoveToLeadPosition ();
+										flock.GetComponent<Flock> ().UnselectAllBirds ();
+										selected = false;
+										flock.GetComponent<Flock> ().ToggleBirdSelected (null);
+
+
 
 
 
@@ -192,11 +197,9 @@ public class Bird : MonoBehaviour
 
 		public void MoveToPosition1 ()
 		{
-				Debug.Log ("move to position1 has been called");
 				iTween.MoveTo (gameObject, iTween.Hash ("position", position1.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
 //				transform.position = Vector3.MoveTowards (transform.position, position1.transform.position, Time.deltaTime);
 
-				Debug.Log ("Bird " + birdNumber + "should move to position1 has been called");
 		}
 
 		public void MoveToPosition2 ()
@@ -208,7 +211,6 @@ public class Bird : MonoBehaviour
 
 		public void MoveToLeadPosition ()
 		{
-				Debug.Log ("Bird " + position + "should be moving to lead position");
 
 				iTween.MoveTo (gameObject, iTween.Hash ("position", position3.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
 //				transform.position = Vector3.MoveTowards (transform.position, leadPosition.transform.position, Time.deltaTime);

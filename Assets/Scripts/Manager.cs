@@ -37,64 +37,299 @@ public class Manager : MonoBehaviour
 
 		public void MoveCubeToFront (int cubeToMoveForward, int spotVacated)
 		{
+
 				if (cubeToMoveForward == 1) {
-						iTween.MoveTo (cube1, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						if (spotVacated == 1) {
+								iTween.MoveTo (cube1, iTween.Hash ("path", iTweenPath.GetPath ("1to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 2) {
+								iTween.MoveTo (cube1, iTween.Hash ("path", iTweenPath.GetPath ("2to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 3) {
+								iTween.MoveTo (cube1, iTween.Hash ("path", iTweenPath.GetPath ("3to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 4) {
+								iTween.MoveTo (cube1, iTween.Hash ("path", iTweenPath.GetPath ("4to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 5) {
+								iTween.MoveTo (cube1, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 6) {
+								iTween.MoveTo (cube1, iTween.Hash ("path", iTweenPath.GetPath ("6to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 7) {
+								iTween.MoveTo (cube1, iTween.Hash ("path", iTweenPath.GetPath ("7to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 8) {
+								iTween.MoveTo (cube1, iTween.Hash ("path", iTweenPath.GetPath ("8to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 9) {
+								iTween.MoveTo (cube1, iTween.Hash ("path", iTweenPath.GetPath ("9to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
 						MoveFrontBackToPosition (spotVacated);
 						cubeInFront = 1;
 						cube1.GetComponent<Cube> ().SetPosition (5);
 				}
 
 				if (cubeToMoveForward == 2) {
-						iTween.MoveTo (cube2, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						if (spotVacated == 1) {
+								iTween.MoveTo (cube2, iTween.Hash ("path", iTweenPath.GetPath ("1to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 2) {
+								iTween.MoveTo (cube2, iTween.Hash ("path", iTweenPath.GetPath ("2to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 3) {
+								iTween.MoveTo (cube2, iTween.Hash ("path", iTweenPath.GetPath ("3to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 4) {
+								iTween.MoveTo (cube2, iTween.Hash ("path", iTweenPath.GetPath ("4to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 5) {
+								iTween.MoveTo (cube2, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 6) {
+								iTween.MoveTo (cube2, iTween.Hash ("path", iTweenPath.GetPath ("6to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 7) {
+								iTween.MoveTo (cube2, iTween.Hash ("path", iTweenPath.GetPath ("7to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 8) {
+								iTween.MoveTo (cube2, iTween.Hash ("path", iTweenPath.GetPath ("8to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 9) {
+								iTween.MoveTo (cube2, iTween.Hash ("path", iTweenPath.GetPath ("9to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
 						MoveFrontBackToPosition (spotVacated);
 						cubeInFront = 2;
 						cube2.GetComponent<Cube> ().SetPosition (5);
 				}
 		
 				if (cubeToMoveForward == 3) {
-						iTween.MoveTo (cube3, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						if (spotVacated == 1) {
+								iTween.MoveTo (cube3, iTween.Hash ("path", iTweenPath.GetPath ("1to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 2) {
+								iTween.MoveTo (cube3, iTween.Hash ("path", iTweenPath.GetPath ("2to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 3) {
+								iTween.MoveTo (cube3, iTween.Hash ("path", iTweenPath.GetPath ("3to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 4) {
+								iTween.MoveTo (cube3, iTween.Hash ("path", iTweenPath.GetPath ("4to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 5) {
+								iTween.MoveTo (cube3, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 6) {
+								iTween.MoveTo (cube3, iTween.Hash ("path", iTweenPath.GetPath ("6to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 7) {
+								iTween.MoveTo (cube3, iTween.Hash ("path", iTweenPath.GetPath ("7to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 8) {
+								iTween.MoveTo (cube3, iTween.Hash ("path", iTweenPath.GetPath ("8to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 9) {
+								iTween.MoveTo (cube3, iTween.Hash ("path", iTweenPath.GetPath ("9to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
 						MoveFrontBackToPosition (spotVacated);
 						cubeInFront = 3;
 						cube3.GetComponent<Cube> ().SetPosition (5);
 				}
 
 				if (cubeToMoveForward == 4) {
-						iTween.MoveTo (cube4, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						if (spotVacated == 1) {
+								iTween.MoveTo (cube4, iTween.Hash ("path", iTweenPath.GetPath ("1to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 2) {
+								iTween.MoveTo (cube4, iTween.Hash ("path", iTweenPath.GetPath ("2to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 3) {
+								iTween.MoveTo (cube4, iTween.Hash ("path", iTweenPath.GetPath ("3to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 4) {
+								iTween.MoveTo (cube4, iTween.Hash ("path", iTweenPath.GetPath ("4to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 5) {
+								iTween.MoveTo (cube4, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 6) {
+								iTween.MoveTo (cube4, iTween.Hash ("path", iTweenPath.GetPath ("6to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 7) {
+								iTween.MoveTo (cube4, iTween.Hash ("path", iTweenPath.GetPath ("7to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 8) {
+								iTween.MoveTo (cube4, iTween.Hash ("path", iTweenPath.GetPath ("8to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 9) {
+								iTween.MoveTo (cube4, iTween.Hash ("path", iTweenPath.GetPath ("9to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
 						MoveFrontBackToPosition (spotVacated);
 						cubeInFront = 4;
 						cube4.GetComponent<Cube> ().SetPosition (5);
 				}
 
 				if (cubeToMoveForward == 5) {
-						iTween.MoveTo (cube5, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						if (spotVacated == 1) {
+								iTween.MoveTo (cube5, iTween.Hash ("path", iTweenPath.GetPath ("1to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 2) {
+								iTween.MoveTo (cube5, iTween.Hash ("path", iTweenPath.GetPath ("2to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 3) {
+								iTween.MoveTo (cube5, iTween.Hash ("path", iTweenPath.GetPath ("3to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 4) {
+								iTween.MoveTo (cube5, iTween.Hash ("path", iTweenPath.GetPath ("4to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 5) {
+								iTween.MoveTo (cube5, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 6) {
+								iTween.MoveTo (cube5, iTween.Hash ("path", iTweenPath.GetPath ("6to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 7) {
+								iTween.MoveTo (cube5, iTween.Hash ("path", iTweenPath.GetPath ("7to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 8) {
+								iTween.MoveTo (cube5, iTween.Hash ("path", iTweenPath.GetPath ("8to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 9) {
+								iTween.MoveTo (cube5, iTween.Hash ("path", iTweenPath.GetPath ("9to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
 						MoveFrontBackToPosition (spotVacated);
 						cubeInFront = 5;
 						cube5.GetComponent<Cube> ().SetPosition (5);
 				}
 
 				if (cubeToMoveForward == 6) {
-						iTween.MoveTo (cube6, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						if (spotVacated == 1) {
+								iTween.MoveTo (cube6, iTween.Hash ("path", iTweenPath.GetPath ("1to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 2) {
+								iTween.MoveTo (cube6, iTween.Hash ("path", iTweenPath.GetPath ("2to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 3) {
+								iTween.MoveTo (cube6, iTween.Hash ("path", iTweenPath.GetPath ("3to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 4) {
+								iTween.MoveTo (cube6, iTween.Hash ("path", iTweenPath.GetPath ("4to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 5) {
+								iTween.MoveTo (cube6, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 6) {
+								iTween.MoveTo (cube6, iTween.Hash ("path", iTweenPath.GetPath ("6to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 7) {
+								iTween.MoveTo (cube6, iTween.Hash ("path", iTweenPath.GetPath ("7to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 8) {
+								iTween.MoveTo (cube6, iTween.Hash ("path", iTweenPath.GetPath ("8to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 9) {
+								iTween.MoveTo (cube6, iTween.Hash ("path", iTweenPath.GetPath ("9to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
 						MoveFrontBackToPosition (spotVacated);
 						cubeInFront = 6;
 						cube6.GetComponent<Cube> ().SetPosition (5);
 				}
 
 				if (cubeToMoveForward == 7) {
-						iTween.MoveTo (cube7, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						if (spotVacated == 1) {
+								iTween.MoveTo (cube7, iTween.Hash ("path", iTweenPath.GetPath ("1to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 2) {
+								iTween.MoveTo (cube7, iTween.Hash ("path", iTweenPath.GetPath ("2to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 3) {
+								iTween.MoveTo (cube7, iTween.Hash ("path", iTweenPath.GetPath ("3to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 4) {
+								iTween.MoveTo (cube7, iTween.Hash ("path", iTweenPath.GetPath ("4to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 5) {
+								iTween.MoveTo (cube7, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 6) {
+								iTween.MoveTo (cube7, iTween.Hash ("path", iTweenPath.GetPath ("6to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 7) {
+								iTween.MoveTo (cube7, iTween.Hash ("path", iTweenPath.GetPath ("7to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 8) {
+								iTween.MoveTo (cube7, iTween.Hash ("path", iTweenPath.GetPath ("8to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 9) {
+								iTween.MoveTo (cube7, iTween.Hash ("path", iTweenPath.GetPath ("9to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
 						MoveFrontBackToPosition (spotVacated);
 						cubeInFront = 7;
 						cube7.GetComponent<Cube> ().SetPosition (5);
 				}
 
 				if (cubeToMoveForward == 8) {
-						iTween.MoveTo (cube8, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						if (spotVacated == 1) {
+								iTween.MoveTo (cube8, iTween.Hash ("path", iTweenPath.GetPath ("1to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 2) {
+								iTween.MoveTo (cube8, iTween.Hash ("path", iTweenPath.GetPath ("2to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 3) {
+								iTween.MoveTo (cube8, iTween.Hash ("path", iTweenPath.GetPath ("3to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 4) {
+								iTween.MoveTo (cube8, iTween.Hash ("path", iTweenPath.GetPath ("4to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 5) {
+								iTween.MoveTo (cube8, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 6) {
+								iTween.MoveTo (cube8, iTween.Hash ("path", iTweenPath.GetPath ("6to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 7) {
+								iTween.MoveTo (cube8, iTween.Hash ("path", iTweenPath.GetPath ("7to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 8) {
+								iTween.MoveTo (cube8, iTween.Hash ("path", iTweenPath.GetPath ("8to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 9) {
+								iTween.MoveTo (cube8, iTween.Hash ("path", iTweenPath.GetPath ("9to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
 						MoveFrontBackToPosition (spotVacated);
 						cubeInFront = 8;
 						cube8.GetComponent<Cube> ().SetPosition (5);
 				}
 
 				if (cubeToMoveForward == 9) {
-						iTween.MoveTo (cube9, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						if (spotVacated == 1) {
+								iTween.MoveTo (cube9, iTween.Hash ("path", iTweenPath.GetPath ("1to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 2) {
+								iTween.MoveTo (cube9, iTween.Hash ("path", iTweenPath.GetPath ("2to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 3) {
+								iTween.MoveTo (cube9, iTween.Hash ("path", iTweenPath.GetPath ("3to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 4) {
+								iTween.MoveTo (cube9, iTween.Hash ("path", iTweenPath.GetPath ("4to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 5) {
+								iTween.MoveTo (cube9, iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 6) {
+								iTween.MoveTo (cube9, iTween.Hash ("path", iTweenPath.GetPath ("6to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 7) {
+								iTween.MoveTo (cube9, iTween.Hash ("path", iTweenPath.GetPath ("7to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 8) {
+								iTween.MoveTo (cube9, iTween.Hash ("path", iTweenPath.GetPath ("8to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
+						if (spotVacated == 9) {
+								iTween.MoveTo (cube9, iTween.Hash ("path", iTweenPath.GetPath ("9to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						}
 						MoveFrontBackToPosition (spotVacated);
 						cubeInFront = 9;
 						cube9.GetComponent<Cube> ().SetPosition (5);

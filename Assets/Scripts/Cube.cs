@@ -7,6 +7,7 @@ public class Cube : MonoBehaviour
 		public Color deselectedColor;
 		public GameObject manager;
 		public int cubeNumber;
+		public int cubePosition;
 
 
 		// Use this for initialization
@@ -27,13 +28,18 @@ public class Cube : MonoBehaviour
 		{
 				gameObject.renderer.material.SetColor ("_Color", highlightedColor);
 				if ((Input.GetMouseButtonDown (0))) {
-						manager.GetComponent<Manager> ().MoveCubeToFront (cubeNumber);
+						manager.GetComponent<Manager> ().MoveCubeToFront (cubeNumber, cubePosition);
 				}
 		}
 
 		void OnMouseExit ()
 		{
 				gameObject.renderer.material.SetColor ("_Color", deselectedColor);
+		}
 
+		public void SetPosition (int newPosition)
+		{
+				Debug.Log ("setpositioncalled");
+				cubePosition = newPosition;
 		}
 }

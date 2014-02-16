@@ -1,10 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Cube.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Manager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Bird.cs" Line="117" Column="59" />
-      <File FileName="Assets/Scripts/Flock.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Cube.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Cube.cs" Line="42" Column="37" />
+      <File FileName="Assets/Scripts/Manager.cs" Line="47" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

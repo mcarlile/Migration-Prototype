@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Flock.cs" />
      <Compile Include="Assets\Scripts\Follow.cs" />
      <Compile Include="Assets\Scripts\Manager.cs" />
+     <None Include="Assets\TransformUtilities\README.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">

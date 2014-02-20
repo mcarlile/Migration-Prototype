@@ -5,10 +5,13 @@ public class Cube : MonoBehaviour
 {
 		public Color highlightedColor;
 		public Color deselectedColor;
+		public Color healthHigh;
+		public Color healthMedium;
+		public Color healthLow;
 		public GameObject manager;
 		public int cubeNumber;
 		public int cubePosition;
-		public int health = 7;
+		public double health = 7;
 		public GameObject health1;
 		public GameObject health2;
 		public GameObject health3;
@@ -18,63 +21,70 @@ public class Cube : MonoBehaviour
 		public GameObject health7;
 	
 	
-	// Use this for initialization
+		// Use this for initialization
 		void Start ()
 		{
 				manager = GameObject.Find ("_Manager");
 				gameObject.renderer.material.SetColor ("_Color", deselectedColor);
-
+				health1.renderer.material.SetColor ("_Color", healthHigh);
+				health2.renderer.material.SetColor ("_Color", healthHigh);
+				health3.renderer.material.SetColor ("_Color", healthHigh);
+				health4.renderer.material.SetColor ("_Color", healthHigh);
+				health5.renderer.material.SetColor ("_Color", healthHigh);
+				health6.renderer.material.SetColor ("_Color", healthHigh);
+				health7.renderer.material.SetColor ("_Color", healthHigh);
+		
 		}
 	
 		// Update is called once per frame
 		void Update ()
 		{
-			if (health < 7) {
-				health7.SetActive (false);
-			} else {
-				health7.SetActive (true);
-			}
+				if (health < 7) {
+						health7.SetActive (false);
+				} else {
+						health7.SetActive (true);
+				}
 			
-			if (health < 6) {
-				health6.SetActive (false);
-			} else {
-				health6.SetActive (true);
-			}
+				if (health < 6) {
+						health6.SetActive (false);
+				} else {
+						health6.SetActive (true);
+				}
 			
-			if (health < 5) {
-				health5.SetActive (false);
-			} else {
-				health5.SetActive (true);
-			}
+				if (health < 5) {
+						health5.SetActive (false);
+				} else {
+						health5.SetActive (true);
+				}
 			
-			if (health < 4) {
-				health4.SetActive (false);
-			} else {
-				health4.SetActive (true);
-			}
+				if (health < 4) {
+						health4.SetActive (false);
+				} else {
+						health4.SetActive (true);
+				}
 			
-			if (health < 3) {
-				health3.SetActive (false);
-			} else {
-				health3.SetActive (true);
-			}
+				if (health < 3) {
+						health3.SetActive (false);
+				} else {
+						health3.SetActive (true);
+				}
 			
-			if (health < 2) {
-				health2.SetActive (false);
-			} else {
-				health2.SetActive (true);
-			}
+				if (health < 2) {
+						health2.SetActive (false);
+				} else {
+						health2.SetActive (true);
+				}
 			
-			if (health <= 1) {
-				health1.SetActive (false);
-			} else {
-				health1.SetActive (true);
-			}
-	}
+				if (health <= 1) {
+						health1.SetActive (false);
+				} else {
+						health1.SetActive (true);
+				}
+		}
 	
-	void OnMouseOver ()
-	{
-		gameObject.renderer.material.SetColor ("_Color", highlightedColor);
+		void OnMouseOver ()
+		{
+				gameObject.renderer.material.SetColor ("_Color", highlightedColor);
 				if ((Input.GetMouseButtonDown (0))) {
 						manager.GetComponent<Manager> ().MoveCubeToFront (cubeNumber, cubePosition);
 				}
@@ -102,24 +112,54 @@ public class Cube : MonoBehaviour
 				Debug.Log ("change health called");
 
 				if (((cubePosition == 1) || (cubePosition == 9)) && (health <= 5)) {
-						health = health + 2;
+						health = health + 1;
 				}
 
 				if (((cubePosition == 2) || (cubePosition == 8)) && (health <= 5)) {
-						health = health ++;
+						health = health + 0.5;
 				}
 
 				if (((cubePosition == 3) || (cubePosition == 7)) && (health <= 5)) {
 				}
 
 				if (((cubePosition == 4) || (cubePosition == 6)) && (health <= 5)) {
-						health = health --;
+						health = health - 0.5;
 				}
 
 				if ((cubePosition == 5) && (health >= 2)) {
-						health = health - 2;
+						health = health - 1;
 				}
-		
-	
+				ChangeHealthMeterColor ();
+		}
+
+		public void ChangeHealthMeterColor ()
+		{
+				if (health >= 5) {
+						health1.renderer.material.SetColor ("_Color", healthHigh);
+						health2.renderer.material.SetColor ("_Color", healthHigh);
+						health3.renderer.material.SetColor ("_Color", healthHigh);
+						health4.renderer.material.SetColor ("_Color", healthHigh);
+						health5.renderer.material.SetColor ("_Color", healthHigh);
+						health6.renderer.material.SetColor ("_Color", healthHigh);
+						health7.renderer.material.SetColor ("_Color", healthHigh);
+				}
+				if ((health >= 2) && (health < 5)) {
+						health1.renderer.material.SetColor ("_Color", healthMedium);
+						health2.renderer.material.SetColor ("_Color", healthMedium);
+						health3.renderer.material.SetColor ("_Color", healthMedium);
+						health4.renderer.material.SetColor ("_Color", healthMedium);
+						health5.renderer.material.SetColor ("_Color", healthMedium);
+						health6.renderer.material.SetColor ("_Color", healthMedium);
+						health7.renderer.material.SetColor ("_Color", healthMedium);
+				}
+				if (health <= 2) {
+						health1.renderer.material.SetColor ("_Color", healthLow);
+						health2.renderer.material.SetColor ("_Color", healthLow);
+						health3.renderer.material.SetColor ("_Color", healthLow);
+						health4.renderer.material.SetColor ("_Color", healthLow);
+						health5.renderer.material.SetColor ("_Color", healthLow);
+						health6.renderer.material.SetColor ("_Color", healthLow);
+						health7.renderer.material.SetColor ("_Color", healthLow);
+				}
 		}
 }

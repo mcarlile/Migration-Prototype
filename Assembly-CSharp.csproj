@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Flock2.cs" />
      <Compile Include="Assets\Pixelplacement\iTweenPath\iTweenPath.cs" />
      <Compile Include="Assets\Scripts\A_Bird.cs" />
      <Compile Include="Assets\Scripts\A_Flock.cs" />

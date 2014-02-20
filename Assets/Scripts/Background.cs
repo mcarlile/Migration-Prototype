@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Flock2 : MonoBehaviour
+public class Background : MonoBehaviour
 {
 
 		private Vector3 movement = new Vector3 (0.0f, 0.0f, 0.0f);
@@ -17,15 +17,15 @@ public class Flock2 : MonoBehaviour
 		void Update ()
 		{
 		
-				movement = Vector3.up * movementSpeed * Time.deltaTime;
+				movement = Vector3.down * movementSpeed * Time.deltaTime;
 				gameObject.transform.Translate (movement);
 		
-				if (Input.GetKey (KeyCode.RightArrow)) {
+				if (Input.GetKey (KeyCode.LeftArrow)) {
 						movement = Vector3.right * movementSpeed * Time.deltaTime;
 						gameObject.transform.Translate (movement);
 				}
 		
-				if (Input.GetKey (KeyCode.LeftArrow)) {
+				if (Input.GetKey (KeyCode.RightArrow)) {
 						movement = Vector3.left * movementSpeed * Time.deltaTime;
 						gameObject.transform.Translate (movement);
 				}

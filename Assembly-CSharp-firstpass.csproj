@@ -46,8 +46,19 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Plugins\Pixelplacement\iTweenPath\Editor\iTweenPathEditor.cs" />
+     <Compile Include="Assets\Plugins\Pixelplacement\iTweenPath\iTweenPath.cs" />
+     <Compile Include="Assets\Plugins\TransformUtilities\Editor\TransformUtil.cs" />
+     <Compile Include="Assets\Plugins\TransformUtilities\Editor\TransformUtilFlip.cs" />
+     <Compile Include="Assets\Plugins\TransformUtilities\Editor\TransformUtilGUI.cs" />
+     <Compile Include="Assets\Plugins\TransformUtilities\Editor\TransformUtilGrid.cs" />
+     <Compile Include="Assets\Plugins\TransformUtilities\Editor\TransformUtilMenuItems.cs" />
+     <Compile Include="Assets\Plugins\TransformUtilities\Editor\TransformUtilNudge.cs" />
+     <Compile Include="Assets\Plugins\TransformUtilities\Editor\TransformUtilRotate.cs" />
+     <Compile Include="Assets\Plugins\TransformUtilities\Editor\TransformUtilSnap.cs" />
+     <Compile Include="Assets\Plugins\TransformUtilities\Editor\TransformUtilVars.cs" />
      <Compile Include="Assets\Plugins\iTween.cs" />
-     <None Include="Assets\TransformUtilities\README.txt" />
+     <None Include="Assets\Plugins\TransformUtilities\README.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

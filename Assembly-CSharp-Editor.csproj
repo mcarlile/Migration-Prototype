@@ -47,16 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Pixelplacement\iTweenPath\Editor\iTweenPathEditor.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtil.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtilFlip.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtilGUI.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtilGrid.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtilMenuItems.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtilNudge.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtilRotate.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtilSnap.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtilVars.cs" />
-     <None Include="Assets\TransformUtilities\README.txt" />
+     <None Include="Assets\Plugins\TransformUtilities\README.txt" />
  <Reference Include="\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs">
  <HintPath>\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs.dll</HintPath>
  </Reference>
@@ -75,8 +66,6 @@
       <Project>{0C8B0993-C83C-535F-6463-CF0C74C87527}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{D0FA8514-9BC5-53B9-9577-14146EFE4697}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
-    <ProjectReference Include="Assembly-UnityScript.unityproj">
-      <Project>{FF85DC00-CDB8-8861-1A2E-614B6E995940}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -47,19 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Pixelplacement\iTweenPath\Editor\iTweenPathEditor.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtil.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtilFlip.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtilGUI.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtilGrid.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtilMenuItems.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtilNudge.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtilRotate.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtilSnap.cs" />
-     <Compile Include="Assets\TransformUtilities\Editor\TransformUtilVars.cs" />
-     <None Include="Assets\TransformUtilities\README.txt" />
- <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript">
- <HintPath>Library\ScriptAssemblies\Assembly-UnityScript.dll</HintPath>
- </Reference>
+     <None Include="Assets\Plugins\TransformUtilities\README.txt" />
  <Reference Include="\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs">
  <HintPath>\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs.dll</HintPath>
  </Reference>

@@ -46,16 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Pixelplacement\iTweenPath\iTweenPath.cs" />
      <Compile Include="Assets\Scripts\A_Bird.cs" />
      <Compile Include="Assets\Scripts\A_Flock.cs" />
      <Compile Include="Assets\Scripts\Background.cs" />
-     <Compile Include="Assets\Scripts\Bird.cs" />
      <Compile Include="Assets\Scripts\Cube.cs" />
-     <Compile Include="Assets\Scripts\Flock.cs" />
-     <Compile Include="Assets\Scripts\Follow.cs" />
      <Compile Include="Assets\Scripts\Manager.cs" />
-     <None Include="Assets\TransformUtilities\README.txt" />
+     <None Include="Assets\Plugins\TransformUtilities\README.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">

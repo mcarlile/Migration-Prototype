@@ -22,6 +22,8 @@ public class Manager : MonoBehaviour
 		public GameObject position7;
 		public GameObject position8;
 		public GameObject position9;
+		public float time;
+		public float secondsBetweenHealthChange = 5;
 	
 		// Use this for initialization
 		void Start ()
@@ -32,9 +34,25 @@ public class Manager : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-	
+				time = time + Time.deltaTime;
+				if (time >= secondsBetweenHealthChange) {
+						ChangeHealth ();
+						time = 0;
+				}
 		}
 
+		void ChangeHealth ()
+		{
+				cube1.gameObject.GetComponent<Cube> ().ChangeHealth ();
+				cube2.gameObject.GetComponent<Cube> ().ChangeHealth ();
+				cube3.gameObject.GetComponent<Cube> ().ChangeHealth ();
+				cube4.gameObject.GetComponent<Cube> ().ChangeHealth ();
+				cube5.gameObject.GetComponent<Cube> ().ChangeHealth ();
+				cube6.gameObject.GetComponent<Cube> ().ChangeHealth ();
+				cube7.gameObject.GetComponent<Cube> ().ChangeHealth ();
+				cube8.gameObject.GetComponent<Cube> ().ChangeHealth ();
+				cube9.gameObject.GetComponent<Cube> ().ChangeHealth ();
+		}
 		public void MoveCubeToFront (int cubeToMoveForward, int spotVacated)
 		{
 

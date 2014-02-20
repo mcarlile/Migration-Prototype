@@ -53,7 +53,6 @@
      <Compile Include="Assets\Scripts\Bird.cs" />
      <Compile Include="Assets\Scripts\Cube.cs" />
      <Compile Include="Assets\Scripts\Flock.cs" />
-     <Compile Include="Assets\Scripts\Flock2.cs" />
      <Compile Include="Assets\Scripts\Follow.cs" />
      <Compile Include="Assets\Scripts\Manager.cs" />
      <None Include="Assets\TransformUtilities\README.txt" />

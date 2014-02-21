@@ -108,24 +108,22 @@ public class Bird : MonoBehaviour
 				//in the front of the flock decrease their health. The more close to either
 				//the front or the back, the more extreme the change
 
-//				Debug.Log ("change health called");
-
-				if (((birdPosition == 1) || (birdPosition == 9)) && (health <= 5)) {
+				if (((birdPosition == 0) || (birdPosition == 8)) && (health <= 5)) {
 						health = health + 1;
 				}
 
-				if (((birdPosition == 2) || (birdPosition == 8)) && (health <= 5)) {
+				if (((birdPosition == 1) || (birdPosition == 7)) && (health <= 5)) {
 						health = health + 0.5;
 				}
 
-				if (((birdPosition == 3) || (birdPosition == 7)) && (health <= 5)) {
+				if (((birdPosition == 2) || (birdPosition == 6)) && (health <= 5)) {
 				}
 
-				if (((birdPosition == 4) || (birdPosition == 6)) && (health <= 5)) {
+				if (((birdPosition == 3) || (birdPosition == 5)) && (health <= 5)) {
 						health = health - 0.5;
 				}
 
-				if ((birdPosition == 5) && (health >= 2)) {
+				if ((birdPosition == 4) && (health >= 2)) {
 						health = health - 1;
 				}
 				ChangeHealthMeterColor ();

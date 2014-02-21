@@ -67,10 +67,11 @@ public class Manager : MonoBehaviour
 				if (birdToMoveForward != 4) {
 						iTween.MoveTo (birds [birdToMoveForward], iTween.Hash ("path", iTweenPath.GetPath (birdToMoveForward + "to4"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
 				} else {
-						iTween.MoveTo (birds [birdToMoveForward], iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+//						if (spotVacated = 0) {
+						iTween.MoveTo (birds [birdToMoveForward], iTween.Hash ("path", iTweenPath.GetPath (spotVacated + "to4"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+//						}
+						//iTween.MoveTo (birds [birdToMoveForward], iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
 				}
-
-
 				MoveBirdToBack (spotVacated);
 				birdInFront = birdToMoveForward;
 				birds [birdToMoveForward].GetComponent<Bird> ().SetPosition (4);

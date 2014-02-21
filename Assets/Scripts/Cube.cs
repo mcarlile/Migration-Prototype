@@ -109,7 +109,7 @@ public class Cube : MonoBehaviour
 				//in the front of the flock decrease their health. The more close to either
 				//the front or the back, the more extreme the change
 
-				Debug.Log ("change health called");
+//				Debug.Log ("change health called");
 
 				if (((cubePosition == 1) || (cubePosition == 9)) && (health <= 5)) {
 						health = health + 1;

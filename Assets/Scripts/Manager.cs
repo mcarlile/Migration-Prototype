@@ -6,16 +6,16 @@ using System.Collections.Generic;
 
 public class Manager : MonoBehaviour
 {
-		public GameObject cube1;
-		public GameObject cube2;
-		public GameObject cube3;
-		public GameObject cube4;
-		public GameObject cube5;
-		public GameObject cube6;
-		public GameObject cube7;
-		public GameObject cube8;
-		public GameObject cube9;
-		public int cubeInFront;
+		public GameObject bird0;
+		public GameObject bird1;
+		public GameObject bird2;
+		public GameObject bird3;
+		public GameObject bird4;
+		public GameObject bird5;
+		public GameObject bird6;
+		public GameObject bird7;
+		public GameObject bird8;
+		public int birdInFront;
 		public GameObject position1;
 		public GameObject position2;
 		public GameObject position3;
@@ -32,17 +32,16 @@ public class Manager : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-				cubeInFront = 5;
-
-				birds.Add (cube1);
-				birds.Add (cube2);
-				birds.Add (cube3);
-				birds.Add (cube4);
-				birds.Add (cube5);
-				birds.Add (cube6);
-				birds.Add (cube7);
-				birds.Add (cube8);
-				birds.Add (cube9);
+				birdInFront = 4;
+				birds.Add (bird0);
+				birds.Add (bird1);
+				birds.Add (bird2);
+				birds.Add (bird3);
+				birds.Add (bird4);
+				birds.Add (bird5);
+				birds.Add (bird6);
+				birds.Add (bird7);
+				birds.Add (bird8);
 		}
 	
 		// Update is called once per frame
@@ -59,42 +58,32 @@ public class Manager : MonoBehaviour
 		void ChangeHealth ()
 		{
 				for (int i=0; i<birds.Count; i++) {
-						birds [i].gameObject.GetComponent<Cube> ().ChangeHealth ();
+						birds [i].gameObject.GetComponent<Bird> ().ChangeHealth ();
 				}
-//				cube1.gameObject.GetComponent<Cube> ().ChangeHealth ();
-//				cube2.gameObject.GetComponent<Cube> ().ChangeHealth ();
-//				cube3.gameObject.GetComponent<Cube> ().ChangeHealth ();
-//				cube4.gameObject.GetComponent<Cube> ().ChangeHealth ();
-//				cube5.gameObject.GetComponent<Cube> ().ChangeHealth ();
-//				cube6.gameObject.GetComponent<Cube> ().ChangeHealth ();
-//				cube7.gameObject.GetComponent<Cube> ().ChangeHealth ();
-//				cube8.gameObject.GetComponent<Cube> ().ChangeHealth ();
-//				cube9.gameObject.GetComponent<Cube> ().ChangeHealth ();
 		}
 
-		public void MoveCubeToFront (int cubeToMoveForward, int spotVacated)
+		public void MoveBirdToFront (int birdToMoveForward, int spotVacated)
 		{
-				if (cubeToMoveForward != 5) {
-						iTween.MoveTo (birds [cubeToMoveForward - 1], iTween.Hash ("path", iTweenPath.GetPath (cubeToMoveForward + "to5"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+				if (birdToMoveForward != 4) {
+						iTween.MoveTo (birds [birdToMoveForward], iTween.Hash ("path", iTweenPath.GetPath (birdToMoveForward + "to4"), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
 				} else {
-						iTween.MoveTo (birds [cubeToMoveForward - 1], iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+						iTween.MoveTo (birds [birdToMoveForward], iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
 				}
 
 
-				MoveFrontBackToPosition (spotVacated);
-				cubeInFront = cubeToMoveForward;
-				birds [cubeToMoveForward - 1].GetComponent<Cube> ().SetPosition (5);
+				MoveBirdToBack (spotVacated);
+				birdInFront = birdToMoveForward;
+				birds [birdToMoveForward].GetComponent<Bird> ().SetPosition (4);
 		}
 	
-		public void MoveFrontBackToPosition (int vacatedPosition)
+		public void MoveBirdToBack (int vacatedPosition)
 		{
-				if (vacatedPosition != 5) {
-						iTween.MoveTo (birds [cubeInFront - 1], iTween.Hash ("path", iTweenPath.GetPath ("5to" + vacatedPosition), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
+				if (vacatedPosition != 4) {
+						iTween.MoveTo (birds [birdInFront], iTween.Hash ("path", iTweenPath.GetPath ("4to" + vacatedPosition), "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
 				} else {
-						//iTween.MoveTo (birds [cubeInFront - 1], iTween.Hash ("position", position5.transform.position, "easetype", iTween.EaseType.easeInOutSine, "time", 2f));
-
 						//do nothing because you can't click on the front bird
 				}
-				birds [cubeInFront - 1].GetComponent<Cube> ().SetPosition (vacatedPosition);
+
+				birds [birdInFront].GetComponent<Bird> ().SetPosition (vacatedPosition);
 		}
 }

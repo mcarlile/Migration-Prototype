@@ -49,7 +49,7 @@
      <Compile Include="Assets\Scripts\A_Bird.cs" />
      <Compile Include="Assets\Scripts\A_Flock.cs" />
      <Compile Include="Assets\Scripts\Background.cs" />
-     <Compile Include="Assets\Scripts\Cube.cs" />
+     <Compile Include="Assets\Scripts\Bird.cs" />
      <Compile Include="Assets\Scripts\Manager.cs" />
      <None Include="Assets\Plugins\TransformUtilities\README.txt" />
   </ItemGroup>

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Cube : MonoBehaviour
+public class Bird : MonoBehaviour
 {
 		public Color highlightedColor;
 		public Color deselectedColor;
@@ -9,8 +9,8 @@ public class Cube : MonoBehaviour
 		public Color healthMedium;
 		public Color healthLow;
 		public GameObject manager;
-		public int cubeNumber;
-		public int cubePosition;
+		public int birdNumber;
+		public int birdPosition;
 		public double health = 7;
 		public GameObject health1;
 		public GameObject health2;
@@ -86,7 +86,7 @@ public class Cube : MonoBehaviour
 		{
 				gameObject.renderer.material.SetColor ("_Color", highlightedColor);
 				if ((Input.GetMouseButtonDown (0))) {
-						manager.GetComponent<Manager> ().MoveCubeToFront (cubeNumber, cubePosition);
+						manager.GetComponent<Manager> ().MoveBirdToFront (birdNumber, birdPosition);
 				}
 		}
 
@@ -97,8 +97,7 @@ public class Cube : MonoBehaviour
 
 		public void SetPosition (int newPosition)
 		{
-				Debug.Log ("setpositioncalled");
-				cubePosition = newPosition;
+				birdPosition = newPosition;
 		}
 
 		//Begin Health Management System
@@ -111,22 +110,22 @@ public class Cube : MonoBehaviour
 
 //				Debug.Log ("change health called");
 
-				if (((cubePosition == 1) || (cubePosition == 9)) && (health <= 5)) {
+				if (((birdPosition == 1) || (birdPosition == 9)) && (health <= 5)) {
 						health = health + 1;
 				}
 
-				if (((cubePosition == 2) || (cubePosition == 8)) && (health <= 5)) {
+				if (((birdPosition == 2) || (birdPosition == 8)) && (health <= 5)) {
 						health = health + 0.5;
 				}
 
-				if (((cubePosition == 3) || (cubePosition == 7)) && (health <= 5)) {
+				if (((birdPosition == 3) || (birdPosition == 7)) && (health <= 5)) {
 				}
 
-				if (((cubePosition == 4) || (cubePosition == 6)) && (health <= 5)) {
+				if (((birdPosition == 4) || (birdPosition == 6)) && (health <= 5)) {
 						health = health - 0.5;
 				}
 
-				if ((cubePosition == 5) && (health >= 2)) {
+				if ((birdPosition == 5) && (health >= 2)) {
 						health = health - 1;
 				}
 				ChangeHealthMeterColor ();
